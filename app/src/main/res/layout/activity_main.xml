@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="115dp"
+        android:text="Aplikasi Kalkulator Bidang Datar"
+        android:textColor="#000000"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/BtnLingkaran"
+        android:layout_width="131dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="59dp"
+        android:text="Lingkaran"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/BtnSegitiga" />
+
+    <Button
+        android:id="@+id/BtnPersegi"
+        android:layout_width="100dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginBottom="77dp"
+        android:text="Persegi"
+        app:layout_constraintBottom_toTopOf="@+id/BtnLingkaran"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView10" />
+
+    <Button
+        android:id="@+id/BtnSegitiga"
+        android:layout_width="115dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="123dp"
+        android:text="Segitiga"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginEnd="23dp"
+        android:text="Panjang/Alas/Diameter"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/InputPAD"
+        app:layout_constraintEnd_toStartOf="@+id/InputPAD"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/InputPAD" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginEnd="22dp"
+        android:text="Lebar/Tinggi"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/InputLT"
+        app:layout_constraintEnd_toStartOf="@+id/InputLT"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/InputLT" />
+
+    <EditText
+        android:id="@+id/InputPAD"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="53dp"
+        android:layout_marginBottom="85dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/InputLT"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView8" />
+
+    <EditText
+        android:id="@+id/InputLT"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="288dp"
+        android:layout_marginEnd="56dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:text="Luas :"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/HasilLuas"
+        app:layout_constraintStart_toStartOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="43dp"
+        android:text="Keliling :"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/HasilKeliling"
+        app:layout_constraintEnd_toEndOf="@+id/BtnPersegi" />
+
+    <TextView
+        android:id="@+id/HasilKeliling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="21dp"
+        android:text="0"
+        android:textColor="#224E81"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/HasilLuas" />
+
+    <TextView
+        android:id="@+id/HasilLuas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="31dp"
+        android:text="0"
+        android:textColor="#224E81"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/HasilKeliling"
+        app:layout_constraintTop_toBottomOf="@+id/InputLT" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
